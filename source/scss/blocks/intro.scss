@@ -97,14 +97,11 @@
   font-size: 2.4rem;
   line-height: 1.27;
   opacity: 0;
-  transform: translate(0, 25px);
-  transition: opacity 1s 1.5s, transform 1s 1.5s; 
-  
-  /*transition: 0.5s;*/
+  // transform: translate(0, 25px);
+  // transition: opacity 1s 1.5s, transform 1s 1.5s; 
 
-  &.active {
-    opacity: 1;
-    transform: translate(0, 0px);
+  .screen--intro.active & {
+    animation: fadeInTop 0.7s ease forwards;
   }
   
 
@@ -175,9 +172,4 @@
     margin: 0 0 0 -5px;
     font-size: 48px;
   }
-}
-
-.active .intro__message {
-  opacity: 1;
-  transform: translate(0, 0px);
 }

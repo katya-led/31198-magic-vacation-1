@@ -96,6 +96,15 @@
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  opacity: 0;
+
+  .swiper-slide-active & {
+    animation: fadeInLeft .5s ease .2s forwards;
+  }
+
+  .swiper-slide-next & {
+    animation: fadeInLeft .5s ease .4s forwards;
+  }
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -161,6 +170,18 @@
     height: 40px;
   }
 
+  .screen--story & {
+    opacity: 0;
+  }
+
+  .screen--story.active &--prev {
+    animation: rollInRight .3s ease .6s forwards;
+  }
+
+  .screen--story.active &--next {
+    animation: rollInLeft .3s ease .6s forwards;
+  }
+
   &::before {
     @include center;
     content: "";
@@ -170,6 +191,7 @@
     border: 2px solid $c-light;
     border-radius: 50%;
     z-index: -1;
+    transition: width .3s, height .3s;
   }
 
   svg {
@@ -216,7 +238,8 @@
   }
 
   &.swiper-button-disabled {
-    opacity: 0.5;
+    // opacity: 0.5;
+    opacity: 0;
     pointer-events: none;
   }
 }
