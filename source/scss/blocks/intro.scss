@@ -23,7 +23,6 @@
   }
 }
 
-
 .intro__title {
   margin: 0;
   max-width: 99rem;
@@ -74,6 +73,7 @@
   width: 50rem;
   max-width: 50%;
 
+
   @media (min-width: $stop-scaling) {
     width: 500px;
   }
@@ -87,6 +87,8 @@
   }
 }
 
+
+
 .intro__message {
   flex: none;
   width: 50.9rem;
@@ -94,6 +96,17 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  opacity: 0;
+  transform: translate(0, 25px);
+  transition: opacity 1s 1.5s, transform 1s 1.5s; 
+  
+  /*transition: 0.5s;*/
+
+  &.active {
+    opacity: 1;
+    transform: translate(0, 0px);
+  }
+  
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -162,4 +175,9 @@
     margin: 0 0 0 -5px;
     font-size: 48px;
   }
+}
+
+.active .intro__message {
+  opacity: 1;
+  transform: translate(0, 0px);
 }
