@@ -175,11 +175,11 @@
   }
 
   .screen--story.active &--prev {
-    animation: rollInRight .3s ease .6s forwards;
+    animation: rollInRight .35s ease .6s forwards;
   }
 
   .screen--story.active &--next {
-    animation: rollInLeft .3s ease .6s forwards;
+    animation: rollInLeft .35s ease .6s forwards;
   }
 
   &::before {
