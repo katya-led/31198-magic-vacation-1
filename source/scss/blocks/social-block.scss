@@ -161,6 +161,14 @@
     opacity: 0;
     transition: opacity 0.3s ease;
 
+    &:nth-child(2) {
+      transition: opacity 0.3s ease .1s;
+    }
+
+    &:nth-child(3) {
+      transition: opacity 0.3s ease .2s;
+    }
+
     @media (min-width: $stop-scaling) {
       margin-bottom: 5px;
     }
@@ -235,6 +243,7 @@
   }
 
   &--insta {
+     transition-delay: 0.1s;
     svg {
       width: 1.5rem;
       height: 1.5rem;
@@ -247,6 +256,7 @@
   }
 
   &--vk {
+    transition-delay: 0.2s;
     svg {
       width: 1.7rem;
       height: 1rem;
@@ -258,20 +268,3 @@
     }
   }
 }
-
-// animation
-// .social-block__toggler {
-//   transition: color 0.3s ease;
-
-//   &::before {
-//     transition: width 0.3s ease-out, height 0.3s ease-out, border-color 0.3s ease;
-//   }
-// }
-
-// .social-block__list {
-//   transition: opacity 0.3s ease 0.15s;
-// }
-
-// .social-block__link {
-//   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-// }
