@@ -5,6 +5,14 @@
   right: 0;
   padding: 2.7rem 0;
   z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .8s cubic-bezier(.5,.83,.5,.83);
+
+  body.active & {
+    opacity: 1;
+    pointer-events: auto;
+  }
 
   @media (min-width: $stop-scaling) {
     padding: 27px 0;
@@ -36,7 +44,13 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  transform: translateX(-10px);
+  transition: transform 0.4s cubic-bezier(.5,.83,.5,.83);
 
+  body.active & {
+      transform: translateX(0);
+  }
+  
   @media (min-width: $stop-scaling) {
     top: -5px;
     padding: 10px 0;
